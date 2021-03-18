@@ -1,5 +1,6 @@
 # python
 Python snippets
+
 ## Pausable Timer
 ```
 import time
