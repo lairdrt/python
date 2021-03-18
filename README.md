@@ -11,3 +11,5 @@ print(t.elapsed())
 t.resume()
 time.sleep(2.0)
 print(t.elapsed())
+
+Hello
