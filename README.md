@@ -1,6 +1,7 @@
 # python
 Python snippets
 ## Pausable Timer
+Use case:
 ```
 import time
 t = PausableTimer()
