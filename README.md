@@ -18,6 +18,7 @@ print(t.elapsed())
 ## Sunrise/Sunset Calculation
 Use case:
 ```
+from datetime import datetime
 import dateutil.tz as tz
 
 lon = 0.0
@@ -45,4 +46,16 @@ for lat in range(-90, 91):
         print("No sunrise at " + str(lat))
     except SunsetException:
         print("No sunset at " + str(lat))
+lat = 33.386261
+lon = -104.533221
+tzone = tz.gettz('America/Denver')
+tzoffset = -6.0 # during MDT
+dt = datetime.now(tz=tzone)
+sunrise, sunset = sunrise_sunset(lat, lon, dt, tzoffset)
+sunrise = sunrise.astimezone(tzone) # make datetime aware
+sunset = sunset.astimezone(tzone) # make datetime aware
+if sunrise < dt < sunset:
+    print("Day time")
+else:
+    print("Night time")   
 ```
