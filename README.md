@@ -4,6 +4,7 @@ Python snippets
 Use case:
 ```
 import time
+
 t = PausableTimer()
 time.sleep(4.0)
 print(t.elapsed())
