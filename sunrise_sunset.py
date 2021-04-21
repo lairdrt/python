@@ -55,7 +55,7 @@ def sunrise_sunset(lat_deg, lon_deg, dt, tzoffset):
     :param lon_deg: Longitude in decimal degrees
     :param dt: Reference date (datetime object)
     :param tzoffset: Timezone offset (e.g., -7.0) associated with reference date
-    :return: UTC sunrise,sunset datetime
+    :return: UTC sunrise,sunset datetime naive
     :raises: SunriseException when there is no sunrise on given location and date
     :raises: SunsetException when there is no sunset on given location and date
     """    
