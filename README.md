@@ -59,3 +59,10 @@ if sunrise < dt < sunset:
 else:
     print("Night time")   
 ```
+## Timezone Names
+Use case:
+```
+select_choices = get_choices()
+for choice in select_choices:
+    print(choice[0] + ' ' + choice[1])
+```
