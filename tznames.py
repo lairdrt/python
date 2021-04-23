@@ -1,6 +1,5 @@
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # This is a list of time zones from release 2021a of the tz database.
-# ['timezone name', 'country code', 'UTC offset']
 
 from datetime import datetime
 from dateutil import tz
@@ -603,6 +602,11 @@ TZNAMES = [
 ]
 
 def get_choices():
+    """
+    Creates a list of tuples containing official timezone names and names with UTC offsets.
+    Can be used for display of select menu choices (from a Flask route for example).
+    :return: List of tuples (tzname, tzname+UTC offset)
+    """    
     choices = []
     for val in TZNAMES:
         offset = datetime.now(tz.gettz(val)).strftime('%z')
