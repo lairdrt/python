@@ -52,8 +52,8 @@ tzone = tz.gettz('America/Denver')
 tzoffset = -6.0 # during MDT
 dt = datetime.now(tz=tzone)
 sunrise, sunset = sunrise_sunset(lat, lon, dt, tzoffset)
-sunrise = sunrise.astimezone(tzone) # make datetime aware
-sunset = sunset.astimezone(tzone) # make datetime aware
+sunrise = sunrise.replace(tzone) # make datetime aware
+sunset = sunset.replace(tzone) # make datetime aware
 if sunrise < dt < sunset:
     print("Day time")
 else:
