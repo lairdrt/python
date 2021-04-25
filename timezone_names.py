@@ -1,6 +1,6 @@
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # This is a list of time zones from release 2021a of the tz database.
-# ['timezone name', 'country code', 'UTC offset']
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 from datetime import datetime
 from dateutil import tz
